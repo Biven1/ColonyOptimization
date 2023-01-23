@@ -10,3 +10,15 @@ C:\Users\cibin\OneDrive\Рабочий стол\programs\ColonyOptimization\Colo
 C:\Users\cibin\OneDrive\Рабочий стол\programs\ColonyOptimization\ColonyOptimization\obj\Debug\ColonyOptimization.pdb
 C:\Users\cibin\OneDrive\Рабочий стол\programs\ColonyOptimization\ColonyOptimization\obj\Debug\ColonyOptimization.DrawingForm.resources
 C:\Users\cibin\OneDrive\Рабочий стол\programs\ColonyOptimization\ColonyOptimization\obj\Debug\ColonyOptimization.app.resources
+C:\Users\cibin\OneDrive\Документы\GitHub\ColonyOptimization\bin\Debug\ColonyOptimization.exe.config
+C:\Users\cibin\OneDrive\Документы\GitHub\ColonyOptimization\bin\Debug\ColonyOptimization.exe
+C:\Users\cibin\OneDrive\Документы\GitHub\ColonyOptimization\bin\Debug\ColonyOptimization.pdb
+C:\Users\cibin\OneDrive\Документы\GitHub\ColonyOptimization\obj\Debug\ColonyOptimization.csproj.AssemblyReference.cache
+C:\Users\cibin\OneDrive\Документы\GitHub\ColonyOptimization\obj\Debug\ColonyOptimization.csproj.SuggestedBindingRedirects.cache
+C:\Users\cibin\OneDrive\Документы\GitHub\ColonyOptimization\obj\Debug\ColonyOptimization.DrawingForm.resources
+C:\Users\cibin\OneDrive\Документы\GitHub\ColonyOptimization\obj\Debug\ColonyOptimization.app.resources
+C:\Users\cibin\OneDrive\Документы\GitHub\ColonyOptimization\obj\Debug\ColonyOptimization.Properties.Resources.resources
+C:\Users\cibin\OneDrive\Документы\GitHub\ColonyOptimization\obj\Debug\ColonyOptimization.csproj.GenerateResource.cache
+C:\Users\cibin\OneDrive\Документы\GitHub\ColonyOptimization\obj\Debug\ColonyOptimization.csproj.CoreCompileInputs.cache
+C:\Users\cibin\OneDrive\Документы\GitHub\ColonyOptimization\obj\Debug\ColonyOptimization.exe
+C:\Users\cibin\OneDrive\Документы\GitHub\ColonyOptimization\obj\Debug\ColonyOptimization.pdb

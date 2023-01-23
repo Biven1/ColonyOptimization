@@ -24,7 +24,7 @@ namespace ColonyOptimization
         {
             CreateColony();
 
-            DrawMDI = new DrawingForm(colony);
+            DrawMDI = new DrawingForm(ref colony);
             DrawMDI.MdiParent = this;
             
             DrawingPanel.Controls.Add(DrawMDI);
@@ -40,11 +40,22 @@ namespace ColonyOptimization
             int n = Convert.ToInt32(NumPointRead.Value);
             colony = new Colony(n, 500, 300);
 
-            colony.shortWayVisible = checkBoxShowWay.Checked;
-            colony.numOfPointVisible = numOfPointVisible.Checked;
+            Drawing.shortWayVisible = checkBoxShowWay.Checked;
+            Drawing.numOfPointVisible = numOfPointVisible.Checked;
 
             ReloadDistMatrix();
             ReloadPhMatrix();
+            ConstUpdate();
+        }
+
+        private void ConstUpdate()
+        {
+            textBoxAlfa.Text = Searching.a.ToString();
+            textBoxBeta.Text = Searching.b.ToString();
+            textBoxL.Text    = Searching.l.ToString();
+            textBoxQ.Text    = Searching.Q.ToString();
+            textBoxP.Text    = Searching.p.ToString();
+            textBoxNIt.Text  = Searching.NumOfIt.ToString();
         }
 
         private void OnPaint(object sender, PaintEventArgs e)
@@ -77,14 +88,14 @@ namespace ColonyOptimization
 
         private void DoStep_Click(object sender, EventArgs e)
         {
-            colony.OneStep();
+            Searching.OneStep(ref colony);
             Update();
         }
 
         private void DoFiveStepButton_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < 5; i++)
-                colony.OneStep();
+                Searching.OneStep(ref colony);
 
             Update();
         }
@@ -97,13 +108,13 @@ namespace ColonyOptimization
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            colony.shortWayVisible = checkBoxShowWay.Checked;
+            Drawing.shortWayVisible = checkBoxShowWay.Checked;
             DrawMDI.Invalidate();
         }
 
         private void numOfPointVisible_CheckedChanged(object sender, EventArgs e)
         {
-            colony.numOfPointVisible = numOfPointVisible.Checked;
+            Drawing.numOfPointVisible = numOfPointVisible.Checked;
             DrawMDI.Invalidate();
         }
 
@@ -158,11 +169,6 @@ namespace ColonyOptimization
                                     Color.Black, ButtonBorderStyle.Solid);
             var r = new Rectangle(1, 1, c.Width - 2, c.Height - 2);
             e.Graphics.SetClip(r);
-        }
-
-        private void link_click(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/Biven1");
         }
     }
 }

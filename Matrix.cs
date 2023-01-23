@@ -66,6 +66,7 @@ namespace ColonyOptimization
         }
 
         #region Event handlers
+
         private void DistMatrixBtn_Click(object sender, EventArgs e)
         {
             PanelDistMatrix.Visible = !PanelDistMatrix.Visible;
@@ -75,6 +76,7 @@ namespace ColonyOptimization
         {
             PanelPhMatrix.Visible = !PanelPhMatrix.Visible;
         }
+
         #endregion
     }
 }

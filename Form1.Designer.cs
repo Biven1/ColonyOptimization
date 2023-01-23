@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(app));
             this.DistMatrix = new System.Windows.Forms.DataGridView();
             this.PhMatrix = new System.Windows.Forms.DataGridView();
             this.NextItBtn = new System.Windows.Forms.Button();
@@ -42,11 +43,11 @@
             this.Step = new System.Windows.Forms.Label();
             this.shortWayDist = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxNIt = new System.Windows.Forms.TextBox();
+            this.textBoxQ = new System.Windows.Forms.TextBox();
+            this.textBoxP = new System.Windows.Forms.TextBox();
+            this.textBoxL = new System.Windows.Forms.TextBox();
+            this.textBoxBeta = new System.Windows.Forms.TextBox();
             this.textBoxAlfa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -172,7 +173,7 @@
             this.panel11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.panel11.Location = new System.Drawing.Point(275, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(693, 610);
+            this.panel11.Size = new System.Drawing.Size(693, 594);
             this.panel11.TabIndex = 10;
             // 
             // panelParam
@@ -182,7 +183,7 @@
             this.panelParam.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelParam.Location = new System.Drawing.Point(0, 440);
             this.panelParam.Name = "panelParam";
-            this.panelParam.Size = new System.Drawing.Size(693, 170);
+            this.panelParam.Size = new System.Drawing.Size(693, 154);
             this.panelParam.TabIndex = 1;
             // 
             // panel8
@@ -194,7 +195,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(331, 170);
+            this.panel8.Size = new System.Drawing.Size(331, 154);
             this.panel8.TabIndex = 2;
             // 
             // StepNumberText
@@ -240,11 +241,11 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
-            this.panel4.Controls.Add(this.textBox3);
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Controls.Add(this.textBox4);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.textBox6);
+            this.panel4.Controls.Add(this.textBoxNIt);
+            this.panel4.Controls.Add(this.textBoxQ);
+            this.panel4.Controls.Add(this.textBoxP);
+            this.panel4.Controls.Add(this.textBoxL);
+            this.panel4.Controls.Add(this.textBoxBeta);
             this.panel4.Controls.Add(this.textBoxAlfa);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label4);
@@ -256,65 +257,63 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(337, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(356, 170);
+            this.panel4.Size = new System.Drawing.Size(356, 154);
             this.panel4.TabIndex = 1;
             // 
-            // textBox3
+            // textBoxNIt
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Location = new System.Drawing.Point(221, 105);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(50, 20);
-            this.textBox3.TabIndex = 2;
-            this.textBox3.Text = "5";
+            this.textBoxNIt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
+            this.textBoxNIt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxNIt.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxNIt.Location = new System.Drawing.Point(210, 105);
+            this.textBoxNIt.Name = "textBoxNIt";
+            this.textBoxNIt.Size = new System.Drawing.Size(50, 20);
+            this.textBoxNIt.TabIndex = 2;
+            this.textBoxNIt.Text = "5";
             // 
-            // textBox2
+            // textBoxQ
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(176, 63);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(50, 20);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "30";
+            this.textBoxQ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
+            this.textBoxQ.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxQ.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxQ.Location = new System.Drawing.Point(176, 63);
+            this.textBoxQ.Name = "textBoxQ";
+            this.textBoxQ.Size = new System.Drawing.Size(50, 20);
+            this.textBoxQ.TabIndex = 2;
+            this.textBoxQ.Text = "30";
             // 
-            // textBox4
+            // textBoxP
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(277, 37);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(50, 20);
-            this.textBox4.TabIndex = 2;
-            this.textBox4.Text = "0.1";
+            this.textBoxP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
+            this.textBoxP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxP.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxP.Location = new System.Drawing.Point(277, 37);
+            this.textBoxP.Name = "textBoxP";
+            this.textBoxP.Size = new System.Drawing.Size(50, 20);
+            this.textBoxP.TabIndex = 2;
+            this.textBoxP.Text = "0.1";
             // 
-            // textBox1
+            // textBoxL
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(176, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(50, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.Text = "1";
+            this.textBoxL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
+            this.textBoxL.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxL.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxL.Location = new System.Drawing.Point(176, 37);
+            this.textBoxL.Name = "textBoxL";
+            this.textBoxL.Size = new System.Drawing.Size(50, 20);
+            this.textBoxL.TabIndex = 2;
+            this.textBoxL.Text = "1";
             // 
-            // textBox6
+            // textBoxBeta
             // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox6.Location = new System.Drawing.Point(83, 63);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(50, 27);
-            this.textBox6.TabIndex = 2;
-            this.textBox6.Text = "3";
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAlfa_KeyPr);
-            this.textBox6.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxAlfa_KeyUp);
+            this.textBoxBeta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(101)))), ((int)(((byte)(116)))));
+            this.textBoxBeta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxBeta.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxBeta.Location = new System.Drawing.Point(83, 63);
+            this.textBoxBeta.Name = "textBoxBeta";
+            this.textBoxBeta.Size = new System.Drawing.Size(50, 27);
+            this.textBoxBeta.TabIndex = 2;
+            this.textBoxBeta.Text = "3";
             // 
             // textBoxAlfa
             // 
@@ -326,8 +325,6 @@
             this.textBoxAlfa.Size = new System.Drawing.Size(50, 27);
             this.textBoxAlfa.TabIndex = 2;
             this.textBoxAlfa.Text = "1";
-            this.textBoxAlfa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxAlfa_KeyPr);
-            this.textBoxAlfa.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBoxAlfa_KeyUp);
             // 
             // label3
             // 
@@ -345,9 +342,9 @@
             this.label4.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(16, 105);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(178, 20);
+            this.label4.Size = new System.Drawing.Size(182, 20);
             this.label4.TabIndex = 1;
-            this.label4.Text = "number of iterations  = ";
+            this.label4.Text = "number of iterations   = ";
             // 
             // labelBeta
             // 
@@ -385,9 +382,9 @@
             this.labelAlfa.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelAlfa.Location = new System.Drawing.Point(17, 37);
             this.labelAlfa.Name = "labelAlfa";
-            this.labelAlfa.Size = new System.Drawing.Size(60, 20);
+            this.labelAlfa.Size = new System.Drawing.Size(64, 20);
             this.labelAlfa.TabIndex = 1;
-            this.labelAlfa.Text = "alfa   = ";
+            this.labelAlfa.Text = "alfa    = ";
             // 
             // label1
             // 
@@ -439,9 +436,9 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(47)))), ((int)(((byte)(62)))));
             this.panel2.Controls.Add(this.label7);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 610);
+            this.panel2.Location = new System.Drawing.Point(0, 594);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1459, 44);
+            this.panel2.Size = new System.Drawing.Size(1543, 44);
             this.panel2.TabIndex = 7;
             // 
             // label7
@@ -470,7 +467,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(275, 610);
+            this.panel3.Size = new System.Drawing.Size(275, 594);
             this.panel3.TabIndex = 8;
             // 
             // NumPointRead
@@ -587,7 +584,7 @@
             this.PanelMatrix.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMatrix.Location = new System.Drawing.Point(968, 0);
             this.PanelMatrix.Name = "PanelMatrix";
-            this.PanelMatrix.Size = new System.Drawing.Size(553, 610);
+            this.PanelMatrix.Size = new System.Drawing.Size(553, 594);
             this.PanelMatrix.TabIndex = 12;
             // 
             // PanelPhMatrix
@@ -660,7 +657,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(1521, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(0, 610);
+            this.panel6.Size = new System.Drawing.Size(22, 594);
             this.panel6.TabIndex = 14;
             // 
             // app
@@ -668,13 +665,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(214)))), ((int)(((byte)(229)))));
-            this.ClientSize = new System.Drawing.Size(1459, 654);
+            this.ClientSize = new System.Drawing.Size(1543, 638);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.PanelMatrix);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.MinimumSize = new System.Drawing.Size(975, 685);
             this.Name = "app";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Рома ищет дом";
@@ -729,13 +728,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelAlfa;
         private System.Windows.Forms.Label labelBeta;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxQ;
+        private System.Windows.Forms.TextBox textBoxL;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxNIt;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxP;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button DoFiveStepBtn;
         private System.Windows.Forms.Label StepNumberText;
@@ -747,7 +746,7 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.NumericUpDown NumPointRead;
         private System.Windows.Forms.TextBox textBoxAlfa;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxBeta;
         private System.Windows.Forms.Label mas;
         private System.Windows.Forms.Label label7;
     }
